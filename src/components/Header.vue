@@ -1,5 +1,6 @@
 <template>
   <div class="header md-gutter">
+<!--    sub header-->
     <div class="md-layout-item md-large-size-100 md-layout md-gutter sub-header">
       <div class="md-layout-item md-medium-size-20 md-small-size-50 logo">
         <img src="../assets/images/logo.png" alt="">
@@ -22,6 +23,7 @@
       </div>
     </div>
 
+<!--    mega menu-->
     <div class="md-layout-item md-large-size-100 mega-menu">
       <ul>
         <li>

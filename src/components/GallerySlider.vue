@@ -7,6 +7,8 @@
         </div>
       </div>
     </div>
+
+<!--    navigations-->
     <div v-if="right_nav" @click="NextSlide" class="navigation left-navigation"></div>
     <div v-if="left_nav" @click="PreviousSlide" class="navigation right-navigation"></div>
   </div>
@@ -37,6 +39,7 @@ export default {
     }
   },
   watch: {
+    // enable and disable navigations
     step_width : function (val) {
       if (val >= -5 && val < this.slides_width -100 ){
         this.left_nav = true
@@ -52,28 +55,31 @@ export default {
   },
   methods:{
     NextSlide(){
-      this.step_width = this.step_width + (100/3)
-      this.nth += 1
-      let el = document.getElementById('slider')
+      // go slides to right
+      this.step_width = this.step_width + (100/3);
+      this.nth += 1;
+      let el = document.getElementById('slider');
       el.childNodes.forEach(element => {
         element.classList.remove('active')
-      })
-      el.childNodes[this.nth].classList.add('active')
-      this.slides_style.right = - (this.step_width) + '%'
+      });
+      el.childNodes[this.nth].classList.add('active');
+      this.slides_style.right = - (this.step_width) + '%';
     },
     PreviousSlide(){
-      let el = document.getElementById('slider')
-      this.nth -= 1
-      this.step_width = this.step_width - (100/3)
+      // go slides to left
+      let el = document.getElementById('slider');
+      this.nth -= 1;
+      this.step_width = this.step_width - (100/3);
       el.childNodes.forEach(element => {
         element.classList.remove('active')
-      })
-      el.childNodes[this.nth].classList.add('active')
+      });
+      el.childNodes[this.nth].classList.add('active');
 
-      this.slides_style.right = -(this.step_width) + '%'
+      this.slides_style.right = -(this.step_width) + '%';
     }
   },
   mounted() {
+    // active class for main image
     let el = document.getElementById('slider')
     el.childNodes[this.nth].classList.add('active');
 

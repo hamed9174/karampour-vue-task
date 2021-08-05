@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+<!--    index slider-->
     <md-card class="md-primary" md-theme="purple-card">
       <md-card-header>
         <div class="md-title">منتخب تصاویر طبیعت</div>
@@ -8,6 +9,8 @@
         <IndexSlider />
       </md-card-content>
     </md-card>
+
+<!--    about us-->
     <md-card class="md-primary" md-theme="purple-card">
       <md-card-header>
         <div class="md-title">درباره ما</div>
@@ -17,6 +20,8 @@
         <AboutUs />
       </md-card-content>
     </md-card>
+
+<!--    gallery slider-->
     <md-card class="md-primary" md-theme="purple-card">
       <md-card-header>
         <div class="md-title">منتخب تصاویر طبیعت</div>
