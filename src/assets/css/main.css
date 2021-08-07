@@ -169,6 +169,7 @@ ul{
 
 /*about us*/
 .about-us.md-layout.md-gutter{
+    width: 100%;
     height: 400px;
     padding: 1%;
 }
